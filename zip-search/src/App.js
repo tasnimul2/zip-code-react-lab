@@ -4,7 +4,8 @@ import './App.css';
 
 function City(props) {
   return (
-  <div>
+  <div className="Card">
+    <p>---------------------------------------</p>
     <p>City : {props.info.City}</p>
     <p>State : {props.info.State}</p>
     <p>Location : ({props.info.Lat} , {props.info.Long})</p>
@@ -16,8 +17,11 @@ function City(props) {
 
 function ZipSearchField(props) {
   return (
-    <div>
-      <input onChange={ (e)=> props.handleZipUpdate(e)} />
+    <div className="Search-field">
+      <input placeholder="enter a zipcode" 
+      className="input-field" 
+      maxLength="5"
+      onChange={ (e)=> props.handleZipUpdate(e)} />
     </div>);
 }
 
@@ -50,6 +54,10 @@ class App extends Component {
       })
       .catch(error => {
         console.log("error retrieving data");
+      })
+    }else{
+      this.setState({
+        cities : []
       })
     }
   }

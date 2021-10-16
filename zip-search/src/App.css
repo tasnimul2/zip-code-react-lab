@@ -1,6 +1,38 @@
 .App-header {
-  background-color: #222;
+  background: linear-gradient(#eb6b34, #eb8f34);
   padding: 20px;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  border-bottom: 2px solid white;
+}
+.Card{
+  width : 300px;
+  text-align: center;
+  font-weight: bold;
+  margin : auto;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  background: linear-gradient(#eb6b34, #eb8f34);
+  color : white;
+  border-radius: 10px;
+  
+  margin-bottom: 10px;
+
+  
+}
+
+.Search-field{
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+}
+
+.input-field{
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  border-radius: 10px;
+  background: linear-gradient(#eb6b34, #eb8f34);
+  border: 2px solid white;
   color: white;
   text-align: center;
 }
