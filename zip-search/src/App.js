@@ -1,6 +1,19 @@
 import React, { Component } from 'react';
 import './App.css';
 
+/* the functions City and ZipSearchFields are functional components 
+that are responsible for displaying the city information and the text input field  respectively
+
+in the app class, a state object is created that holds the zipcode entered into the text field ,
+and a array of cities, which  stores the data returned from the api call to 
+http://ctp-zip-api.herokuapp.com/zip/
+
+the render is responsible for displaying the content on the screen, hence the City and ZipSearchField components were
+called inside of the render.
+
+since there can be multiple cities assiciated with a zipcode, each of the  elemts in the cities[] array 
+was mapped to a City component. 
+*/
 
 function City(props) {
   return (
@@ -34,8 +47,6 @@ class App extends Component {
   }
 
   updateZipcode = (event)=>{
-
-    console.log(event.target.value)
     this.setState({
       zipcode : event.target.value,
     })
@@ -60,7 +71,7 @@ class App extends Component {
         cities : []
       })
     }
-  }
+  }//end of updateZipCode
 
   render() {
     return (
